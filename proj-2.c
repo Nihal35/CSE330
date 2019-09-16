@@ -4,9 +4,9 @@
 void thread1();
 void thread2();
 
-SEM_t* ptr;
+SEM_t* ptr;        //main class to run 
 
-void thread1()
+void thread1()       //first thread
 {
 	P(ptr);
 	int counter = 0;
@@ -19,7 +19,7 @@ void thread1()
 	}
 }
 
-void thread2()
+void thread2() //2nd thread
 {
 	P(ptr);
 	int counter = 0;
